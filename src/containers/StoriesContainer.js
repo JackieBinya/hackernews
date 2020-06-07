@@ -7,5 +7,11 @@ export const StoriesContainer = () => {
   useEffect(() => {
     getStoryIds().then(setStoryIds);
   }, []);
-  return storyIds.map((storyId) => <Story key={storyId} storyId={storyId} />);
+  return (
+    <>
+      <h1>Hacker News</h1>
+      {storyIds.map((storyId) => <Story key={storyId} storyId={storyId} />)}
+
+    </>
+  );
 };
